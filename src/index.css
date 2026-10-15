@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-50 text-gray-900 antialiased;
+  }
+}
+
+/* Material Design 3 inspired touch targets and active states */
+@layer components {
+  .touch-target {
+    @apply min-h-[48px] min-w-[48px];
+  }
+
+  .tap-highlight-transparent {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl p-4 shadow-sm border border-gray-100;
+  }
+
+  .btn-primary {
+    @apply bg-forest-700 text-white rounded-full px-6 py-3 font-medium active:bg-forest-800 transition-colors shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-forest-50 text-forest-800 rounded-full px-6 py-3 font-medium active:bg-forest-100 transition-colors border border-forest-200;
+  }
+
+  .btn-icon {
+    @apply p-3 rounded-full hover:bg-gray-100 active:bg-gray-200 transition-colors flex items-center justify-center;
+  }
+}
